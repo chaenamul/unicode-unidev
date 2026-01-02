@@ -23,6 +23,7 @@ const transportOptions = [
 const Directions = () => {
   return (
     <Layout>
+      <div className="page-fade-in">
       <section className="py-16 md:py-24">
         <div className="max-w-[1024px] mx-auto px-4">
           <div className="text-center mb-12">
@@ -93,6 +94,7 @@ const Directions = () => {
           </div> */}
         </div>
       </section>
+      </div>
     </Layout>
   );
 };

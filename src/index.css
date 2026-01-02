@@ -152,6 +152,10 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    overflow-y: scroll;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -168,11 +172,24 @@ All colors MUST be HSL.
     }
   }
 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   .animate-scroll {
     /* 로고가 많아지면 20s를 더 늘려 속도를 조절하세요 */
     animation: scroll 20s linear infinite;
     /* 내부 요소들이 줄어들지 않고 한 줄로 길게 늘어서도록 설정 */
     display: flex;
     width: max-content;
+  }
+
+  .page-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
   }
 }

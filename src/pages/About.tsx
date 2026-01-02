@@ -28,6 +28,7 @@ const values = [
 const About = () => {
   return (
     <Layout>
+      <div className="page-fade-in">
       <section className="py-16 md:py-24">
         <div className="max-w-[1024px] mx-auto px-4">
           {/* Header */}
@@ -120,6 +121,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      </div>
     </Layout>
   );
 };

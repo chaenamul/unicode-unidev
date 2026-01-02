@@ -47,11 +47,12 @@ export const SessionCard = ({ session }: { session: Session }) => (
 const Sessions = () => {
   return (
     <Layout>
+      <div className="page-fade-in">
       <section className="py-16 md:py-24">
         <div className="max-w-[1024px] mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Sessions
+              타임테이블
             </h1>
             <p className="text-lg text-muted-foreground">
               UNICODE 26의 세션 라인업을 확인하세요.
@@ -120,6 +121,7 @@ const Sessions = () => {
           </div>
         </div>
       </section>
+      </div>
     </Layout>
   );
 };
