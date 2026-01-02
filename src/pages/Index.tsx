@@ -8,8 +8,9 @@ import { SessionCard } from "@/pages/Sessions";
 import { allSessions, Session } from "@/data/sessions";
 import unicodeLogo from "@/assets/unicode-logo.png";
 import devsistersLogo from "@/assets/BLACK_DEVSISTERS_CI.png";
-import pearlAbyssLogo from "@/assets/pearl-abyss-seeklogo.png";
+import pearlAbyssLogo from "@/assets/Pearlabyss_Black.png";
 import thebackendLogo from "@/assets/BI_kr_black.png";
+import kraftonLogo from "@/assets/KRAFTON_Black.png";
 import nhnLogo from "@/assets/NHN CI_Black.png";
 
 // Set the conference date - January 10, 2025 (Saturday) 10AM
@@ -298,11 +299,13 @@ const Index = () => {
                 { src: pearlAbyssLogo, alt: "Pearl Abyss" },
                 { src: thebackendLogo, alt: "TheBackend" },
                 { src: nhnLogo, alt: "NHN" },
+                { src: kraftonLogo, alt: "Krafton" },
                 /* 복사본 */
                 { src: devsistersLogo, alt: "DEVSISTERS" },
                 { src: pearlAbyssLogo, alt: "Pearl Abyss" },
                 { src: thebackendLogo, alt: "TheBackend" },
                 { src: nhnLogo, alt: "NHN" },
+                { src: kraftonLogo, alt: "Krafton" },
               ].map((logo, index) => (
                 <div
                   key={`logo-${index}`}

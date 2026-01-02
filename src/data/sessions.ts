@@ -48,6 +48,14 @@ export const saturdaySessions: Session[] = [
     tags: ["PM/기획"],
     day: "saturday",
   },
+  {
+    id: 11,
+    time: "16:00 - 16:40",
+    title: "추후 공개",
+    speaker: "크래프톤 UX/UI 디자이너 배윤서",
+    tags: ["PM/기획", "아트/사운드"],
+    day: "saturday",
+  },
 ];
 
 export const sundaySessions: Session[] = [
