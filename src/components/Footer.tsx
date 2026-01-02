@@ -4,7 +4,7 @@ import unidevLogo from "@/assets/modified_UNIDEV_Horizontal.png";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card">
+    <footer className="border-t border-border">
       <div className="max-w-[1024px] mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-2 pb-4">
           <div className="flex flex-col gap-2">
