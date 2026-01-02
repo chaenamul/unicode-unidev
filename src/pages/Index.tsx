@@ -99,7 +99,7 @@ const Index = () => {
         />
 
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-accent to-background py-20 md:py-32">
+        <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-[#FDFCFF] py-20 md:py-32">
           <div className="max-w-[1024px] mx-auto px-4">
             <div className="text-center">
               <img
@@ -151,14 +151,10 @@ const Index = () => {
               </div>
             </div>
           </div>
-
-          {/* Decorative elements */}
-          <div className="absolute top-1/4 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl" />
         </section>
 
         {/* Session Preview Section */}
-        <section className="py-16 md:py-18 bg-card">
+        <section className="py-16 md:py-18 bg-gradient-to-b from-[#FDFCFF] to-[#F9F6FF]">
           <div className="max-w-[1024px] mx-auto px-4">
             <div className="text-center mb-8">
               <div className="flex items-center justify-center gap-4 mb-4">
@@ -261,7 +257,7 @@ const Index = () => {
         </section>
         
         {/* About Preview Section */}
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-[#F9F6FF] to-[#F5F0FF]">
           <div className="max-w-[1024px] mx-auto px-4">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -280,7 +276,7 @@ const Index = () => {
           </div>
         </section>
         {/* Sponsors Section */}
-        <section className="py-16 md:py-18 overflow-hidden">
+        <section className="py-16 md:py-18 overflow-hidden bg-gradient-to-b from-[#F5F0FF] to-[#EFE9FF]">
           <div className="max-w-[1024px] mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
               Our Sponsors

@@ -69,6 +69,14 @@ const Footer = () => {
             >
               NHN
             </Link>
+            <Link
+              to="https://krafton.com/"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              KRAFTON
+            </Link>
           </div>
           
           <div className="flex flex-col items-center md:items-end gap-2">
