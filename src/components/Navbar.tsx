@@ -9,7 +9,7 @@ const navLinks = [
   { name: "행사 개요", path: "/" },
   { name: "세션 소개", path: "/sessions" },
   { name: "오시는 길", path: "/directions" },
-  { name: "UNIDEV 소개", path: "/about" },
+  // { name: "UNIDEV 소개", path: "/about" },
 ];
 
 const Navbar = () => {

@@ -162,14 +162,15 @@ const Index = () => {
                   Now On Stage
                 </h2>
               </div>
-              <Button
+              {/* DEBUG BUTTON */}
+              {/* <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setShowDebug(!showDebug)}
                 className="text-xs"
               >
                 {showDebug ? "Hide Debug" : "Debug"}
-              </Button>
+              </Button> */}
               <p className="text-muted-foreground">
                 Check out what's happening right now at UNICODE 26
               </p>
@@ -269,14 +270,14 @@ const Index = () => {
               <p className="text-muted-foreground text-lg mb-8">
                 2023년부터 대학생 개발자들의 성장과 네트워킹을 지원하며, 매년 혁신적인 프로젝트들을 발굴하고 전시하는 플랫폼을 제공하고 있습니다.
               </p>
-              <Button asChild variant="secondary">
+              {/* <Button asChild variant="secondary">
                 <Link to="/about">Learn More About Us</Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </section>
         {/* Sponsors Section */}
-        <section className="py-16 md:py-18 overflow-hidden bg-gradient-to-b from-[#F9F6FF] to-[#EFE9FF]">
+        <section className="py-16 md:py-18 overflow-hidden bg-gradient-to-b from-[#F9F6FF] to-card">
           <div className="max-w-[1024px] mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
               Our Sponsors
