@@ -19,7 +19,7 @@ export const saturdaySessions: Session[] = [
   {
     id: 2,
     time: "11:00 - 11:40",
-    title: "TA(Technical Artist) 직무 소개",
+    title: "게임 아트와 테크니컬 아티스트",
     speaker: "펄어비스 홍선우(CAT&DOG)",
     tags: ["아트/사운드", "프로그래밍"],
     day: "saturday",
@@ -51,7 +51,7 @@ export const saturdaySessions: Session[] = [
   {
     id: 11,
     time: "16:00 - 16:40",
-    title: "추후 공개",
+    title: "AI 시대의 게임 개발 초기 접근 방법",
     speaker: "크래프톤 UX/UI 디자이너 배윤서",
     tags: ["PM/기획", "아트/사운드"],
     day: "saturday",
