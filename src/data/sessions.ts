@@ -78,8 +78,8 @@ export const sundaySessions: Session[] = [
   {
     id: 8,
     time: "13:00 - 13:40",
-    title: "AI써서 개발하는 기획자 이야기",
-    speaker: "류다민(PoolC)",
+    title: "AI써서 1인 개발하는 기획자 이야기",
+    speaker: "Door Puzzle 류다민(PoolC)",
     tags: ["PM/기획", "프로그래밍"],
     day: "sunday",
   },
