@@ -108,13 +108,17 @@ const Index = () => {
         />
 
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 via-accent to-background py-20 md:py-32">
+        <section className={`relative overflow-hidden bg-gradient-to-b from-primary/10 via-accent to-background ${
+          hasConferenceStarted() ? 'py-6 md:py-8' : 'py-20 md:py-32'
+        }`}>
           <div className="max-w-[1024px] mx-auto px-4">
             <div className="text-center">
               <img
                 src={unicodeLogo}
                 alt="UNICODE 26"
-                className="mx-auto mb-6 max-w-md md:max-w-3xl w-full h-auto"
+                className={`mx-auto mb-6 w-full h-auto ${
+                  hasConferenceStarted() ? 'max-w-xs md:max-w-md' : 'max-w-md md:max-w-3xl'
+                }`}
               />
               <div className="
                 mx-auto w-fit flex flex-col items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-[2rem] text-sm font-medium mb-6
