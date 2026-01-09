@@ -27,7 +27,7 @@ export const saturdaySessions: Session[] = [
   {
     id: 3,
     time: "13:00 - 13:40",
-    title: "데브시스터즈의 개발 업무 프로세스 소개",
+    title: "신규 프로젝트 CC의 로컬라이징 워크플로우 개발기",
     speaker: "데브시스터즈 박정수(SNUGDC)",
     tags: ["PM/기획", "프로그래밍"],
     day: "saturday",
