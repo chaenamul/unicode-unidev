@@ -5,7 +5,7 @@ import unidevLogo from "@/assets/modified_UNIDEV_Horizontal.png";
 const Footer = () => {
   return (
     <footer className="border-t border-border">
-      <div className="max-w-[1024px] mx-auto px-4 py-8">
+      <div className="max-w-[1024px] mx-auto px-4 py-8 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-2 pb-4">
           <div className="flex flex-col gap-2">
             <span className="text-lg font-bold text-muted-foreground">바로가기</span>
