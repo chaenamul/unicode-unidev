@@ -36,7 +36,7 @@ const ScrollToTopButton = () => {
   return (
     <Button
       onClick={scrollToTop}
-      className="fixed bottom-8 z-50 shadow-lg flex flex-col items-center justify-center gap-0.5 h-16 w-16 rounded-full p-0
+      className="fixed bottom-8 z-50 shadow-lg flex flex-col items-center justify-center gap-0.5 h-16 w-16 !rounded-full p-0
         right-8
         min-[1040px]:right-[calc((100vw-1024px)/2-64px)]
       "
