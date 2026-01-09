@@ -53,6 +53,8 @@ const Index = () => {
   const [currentSession, setCurrentSession] = useState<Session | null>(null);
   const [showDebug, setShowDebug] = useState(false);
   const [debugDate, setDebugDate] = useState<Date | undefined>(undefined);
+  const [showYouTubeDebug, setShowYouTubeDebug] = useState(false);
+  const [forceYouTube, setForceYouTube] = useState(false);
 
   useEffect(() => {
     // Update current session every minute
@@ -86,6 +88,13 @@ const Index = () => {
   const resetDebug = () => {
     setDebugDate(undefined);
     setCurrentSession(getCurrentSession());
+  };
+
+  // Check if conference has started (Jan 10, 2026 10AM or later)
+  const hasConferenceStarted = () => {
+    if (forceYouTube) return true;
+    const now = new Date();
+    return now >= CONFERENCE_DATE;
   };
 
   return (
@@ -133,22 +142,76 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Countdown Timer */}
-              <div className="flex justify-center mb-10">
-                <CountdownTimer targetDate={CONFERENCE_DATE} />
-              </div>
+              {/* From Here */}
+              {hasConferenceStarted() ? (
+                // YouTube Live Stream
+                <div className="flex flex-col items-center gap-4 mb-10">
+                  <div className="w-full max-w-4xl aspect-video">
+                    <iframe
+                      className="w-full h-full rounded-lg shadow-lg"
+                      src="https://www.youtube.com/embed/GGUztrBFCSo"
+                      title="UNICODE 26 Live Stream"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setShowYouTubeDebug(!showYouTubeDebug)}
+                    className="text-xs text-muted-foreground"
+                  >
+                    {showYouTubeDebug ? "Hide Debug" : "Debug YouTube"}
+                  </Button>
+                  {showYouTubeDebug && (
+                    <div className="flex gap-2">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => setForceYouTube(false)}
+                        className="text-xs"
+                      >
+                        Show Countdown
+                      </Button>
+                      <span className="text-xs text-muted-foreground flex items-center">
+                        Conference started - showing live stream
+                      </span>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                // Countdown Timer and Buttons (before conference starts)
+                <>
+                  <div className="flex justify-center mb-10">
+                    <CountdownTimer targetDate={CONFERENCE_DATE} />
+                  </div>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button asChild size="lg" className="px-8">
-                  <Link to="/sessions">
-                    타임테이블
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="px-8">
-                  <Link to="/directions">오시는 길</Link>
-                </Button>
-              </div>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <Button asChild size="lg" className="px-8">
+                      <Link to="/sessions">
+                        타임테이블
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline" size="lg" className="px-8">
+                      <Link to="/directions">오시는 길</Link>
+                    </Button>
+                  </div>
+
+                  {/* Debug Button */}
+                  <div className="mt-6">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => setForceYouTube(true)}
+                      className="text-xs text-muted-foreground"
+                    >
+                      Debug: Show YouTube
+                    </Button>
+                  </div>
+                </>
+              )}
+              {/* To There */}
             </div>
           </div>
         </section>
