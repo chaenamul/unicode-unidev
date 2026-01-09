@@ -203,7 +203,7 @@ const Index = () => {
                   </div>
 
                   {/* Debug Button */}
-                  <div className="mt-6">
+                  {/* <div className="mt-6">
                     <Button
                       variant="ghost"
                       size="sm"
@@ -212,7 +212,7 @@ const Index = () => {
                     >
                       Debug: Show YouTube
                     </Button>
-                  </div>
+                  </div> */}
                 </>
               )}
               {/* To There */}
@@ -306,17 +306,17 @@ const Index = () => {
             ) : (
               <div className="max-w-xl mx-auto mb-8 p-8 text-center bg-background rounded-lg border-2 border-dashed border-border">
                 <p className="text-muted-foreground text-lg">
-                  No session is currently in progress.
+                  현재 진행중인 세션이 없습니다.
                   <br />
-                  Check back during the conference!
+                  다음 세션을 기다려주세요.
                 </p>
               </div>
             )}
 
             <div className="text-center">
-              <Button asChild variant="outline" size="lg">
+              <Button asChild size="lg" className="px-8">
                 <Link to="/sessions">
-                  View Full Schedule
+                  전체 타임테이블
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
