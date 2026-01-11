@@ -153,20 +153,20 @@ const Index = () => {
                   <div className="w-full max-w-4xl aspect-video">
                     <iframe
                       className="w-full h-full rounded-lg shadow-lg"
-                      src="https://www.youtube.com/embed/GGUztrBFCSo"
+                      src="https://youtube.com/live/ZHh7HYUPO4w?feature=share"
                       title="UNICODE 26 Live Stream"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
                     ></iframe>
                   </div>
-                  <Button
+                  {/* <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => setShowYouTubeDebug(!showYouTubeDebug)}
                     className="text-xs text-muted-foreground"
                   >
                     {showYouTubeDebug ? "Hide Debug" : "Debug YouTube"}
-                  </Button>
+                  </Button> */}
                   {showYouTubeDebug && (
                     <div className="flex gap-2">
                       <Button
