@@ -153,7 +153,7 @@ const Index = () => {
                   <div className="w-full max-w-4xl aspect-video">
                     <iframe
                       className="w-full h-full rounded-lg shadow-lg"
-                      src="https://youtube.com/live/ZHh7HYUPO4w?feature=share"
+                      src="https://www.youtube.com/embed/ZHh7HYUPO4w"
                       title="UNICODE 26 Live Stream"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
