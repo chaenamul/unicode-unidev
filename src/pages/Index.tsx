@@ -108,20 +108,16 @@ const Index = () => {
         />
 
         {/* Hero Section */}
-        <section className={`relative overflow-hidden bg-gradient-to-b from-primary/10 via-accent to-background ${
-          hasConferenceStarted() ? 'py-6 md:py-8' : 'py-20 md:py-32'
-        }`}>
+        <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-accent to-background py-20 md:py-20">
           <div className="max-w-[1024px] mx-auto px-4">
             <div className="text-center">
               <img
                 src={unicodeLogo}
                 alt="UNICODE 26"
-                className={`mx-auto mb-6 w-full h-auto ${
-                  hasConferenceStarted() ? 'max-w-xs md:max-w-md' : 'max-w-md md:max-w-3xl'
-                }`}
+                className="mx-auto mb-6 w-full h-auto max-w-md md:max-w-3xl"
               />
               <div className="
-                mx-auto w-fit flex flex-col items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-[2rem] text-sm font-medium mb-6
+                mx-auto w-fit flex flex-col items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-[2rem] text-sm font-medium
                 md:flex-row md:gap-4 md:py-2 md:rounded-full
               ">
                 {/* 날짜 섹션 */}
@@ -133,7 +129,7 @@ const Index = () => {
                 {/* 구분선: 모바일 가로선(80px), 데스크탑 세로선 */}
                 <div
                   className="
-                    w-44 h-px bg-primary/20 
+                    w-44 h-px bg-primary/20
                     md:w-px md:h-4 md:bg-primary/30
                     my-1 md:my-0
                   "
@@ -145,187 +141,38 @@ const Index = () => {
                   <span>도산대로 414 한성청담빌딩 9층</span>
                 </div>
               </div>
-
-              {/* From Here */}
-              {hasConferenceStarted() ? (
-                // YouTube Live Stream
-                <div className="flex flex-col items-center gap-4 mb-10">
-                  <div className="w-full max-w-4xl aspect-video">
-                    <iframe
-                      className="w-full h-full rounded-lg shadow-lg"
-                      src="https://www.youtube.com/embed/ZHh7HYUPO4w"
-                      title="UNICODE 26 Live Stream"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                  {/* <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setShowYouTubeDebug(!showYouTubeDebug)}
-                    className="text-xs text-muted-foreground"
-                  >
-                    {showYouTubeDebug ? "Hide Debug" : "Debug YouTube"}
-                  </Button> */}
-                  {showYouTubeDebug && (
-                    <div className="flex gap-2">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => setForceYouTube(false)}
-                        className="text-xs"
-                      >
-                        Show Countdown
-                      </Button>
-                      <span className="text-xs text-muted-foreground flex items-center">
-                        Conference started - showing live stream
-                      </span>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                // Countdown Timer and Buttons (before conference starts)
-                <>
-                  <div className="flex justify-center mb-10">
-                    <CountdownTimer targetDate={CONFERENCE_DATE} />
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <Button asChild size="lg" className="px-8">
-                      <Link to="/sessions">
-                        타임테이블
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" size="lg" className="px-8">
-                      <Link to="/directions">오시는 길</Link>
-                    </Button>
-                  </div>
-
-                  {/* Debug Button */}
-                  {/* <div className="mt-6">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setForceYouTube(true)}
-                      className="text-xs text-muted-foreground"
-                    >
-                      Debug: Show YouTube
-                    </Button>
-                  </div> */}
-                </>
-              )}
-              {/* To There */}
             </div>
           </div>
         </section>
 
-        {/* Session Preview Section */}
-        <section className="py-16 md:py-18 bg-gradient-to-b from-background to-[#F5F0FF]">
+        {/* Conference Ended Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-bl from-background via-accent to-[#F5F0FF]">
           <div className="max-w-[1024px] mx-auto px-4">
-            <div className="text-center mb-8">
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                  Now On Stage
-                </h2>
-              </div>
-              {/* DEBUG BUTTON */}
-              {/* <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setShowDebug(!showDebug)}
-                className="text-xs"
-              >
-                {showDebug ? "Hide Debug" : "Debug"}
-              </Button> */}
-              <p className="text-muted-foreground">
-                Check out what's happening right now at UNICODE 26
+            <div className="flex flex-col items-center gap-6 text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                UNICODE 26 세션 다시보기
+              </h2>
+              <p className="text-muted-foreground max-w-2xl">
+                오프라인 행사가 모두 마무리되었습니다.
+                <br />
+                다시보기를 통해 놓친 강연을 다시 확인하실 수 있습니다.
               </p>
-            </div>
-
-            {/* Debug Controls */}
-            {showDebug && (
-              <div className="max-w-xl mx-auto mb-6 p-4 bg-background rounded-lg border border-border">
-                <div className="text-sm font-medium mb-3">Debug Controls</div>
-                <div className="flex flex-col gap-3">
-                  <div className="flex gap-2">
-                    <div className="flex-1">
-                      <label className="text-xs text-muted-foreground block mb-1">
-                        Date
-                      </label>
-                      <input
-                        type="date"
-                        className="w-full px-3 py-2 bg-card border border-input rounded-md text-sm"
-                        value={
-                          debugDate
-                            ? debugDate.toISOString().split("T")[0]
-                            : ""
-                        }
-                        onChange={(e) => handleDebugDateChange(e.target.value)}
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <label className="text-xs text-muted-foreground block mb-1">
-                        Time
-                      </label>
-                      <input
-                        type="time"
-                        className="w-full px-3 py-2 bg-card border border-input rounded-md text-sm"
-                        value={
-                          debugDate
-                            ? `${String(debugDate.getHours()).padStart(2, "0")}:${String(debugDate.getMinutes()).padStart(2, "0")}`
-                            : ""
-                        }
-                        onChange={(e) => handleDebugTimeChange(e.target.value)}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={resetDebug}
-                      className="text-xs"
-                    >
-                      Reset to Current Time
-                    </Button>
-                    {debugDate && (
-                      <div className="text-xs text-muted-foreground flex items-center">
-                        Simulating: {debugDate.toLocaleString()}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {currentSession ? (
-              <div className="max-w-xl mx-auto mb-8">
-                <SessionCard session={currentSession} />
-              </div>
-            ) : (
-              <div className="max-w-xl mx-auto mb-8 p-8 text-center bg-background rounded-lg border-2 border-dashed border-border">
-                <p className="text-muted-foreground text-lg">
-                  현재 진행중인 세션이 없습니다.
-                  <br />
-                  다음 세션을 기다려주세요.
-                </p>
-              </div>
-            )}
-
-            <div className="text-center">
               <Button asChild size="lg" className="px-8">
-                <Link to="/sessions">
-                  전체 타임테이블
+                <Link
+                  to="https://youtube.com/playlist?list=PLJGO6Gt24pG41wLsdQze_2w6yPWfp2buG&si=BUyN1F376_OZC9mN"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  세션 다시보기
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
           </div>
         </section>
-        
+
         {/* About Preview Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-[#F5F0FF] to-[#F9F6FF]">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-[#F5F0FF] to-[#F9F6FF]">
           <div className="max-w-[1024px] mx-auto px-4">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
